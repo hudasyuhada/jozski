@@ -1,0 +1,796 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Huda Syuhada | Personal Website</title>
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js" defer></script>
+
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
+
+    <header class="site-header">
+
+        <a href="#home" class="logo">
+            HS<span>.</span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            type="button"
+        >
+            ☰
+        </button>
+
+        <nav class="navigation" id="navigation">
+
+            <a href="#home">Home</a>
+            <a href="#featured">Featured</a>
+            <a href="#about">About</a>
+            <a href="#journey">Journey</a>
+            <a href="#collections">Collections</a>
+
+        </nav>
+
+        <a href="#contact" class="header-contact">
+            LET'S CONNECT ↗
+        </a>
+
+    </header>
+
+
+    <main>
+
+        <!-- =====================================
+             HERO SECTION
+        ====================================== -->
+
+        <section class="hero-interactive" id="home">
+
+            <div class="hero-intro">
+
+                <p>WELCOME TO MY PERSONAL SPACE</p>
+
+                <span>
+                    A LITTLE SPACE THAT TELLS MY STORY.
+                </span>
+
+            </div>
+
+
+            <div class="hero-stage">
+
+                <!-- NAME -->
+
+                <h1 class="hero-name hero-name-huda">
+                    HUDA
+                </h1>
+
+                <h1 class="hero-name hero-name-syuhada">
+                    SYUHADA<span>.</span>
+                </h1>
+
+
+                <!-- INTERACTIVE PHOTO -->
+
+                <button
+                    class="hero-photo-button"
+                    id="heroPhoto"
+                    type="button"
+                    aria-label="Move photo to reveal my name"
+                    aria-pressed="false"
+                >
+
+                    <img
+                        src="images/profile.jpg"
+                        alt="Portrait of Huda Syuhada"
+                        class="hero-photo"
+                    >
+
+                </button>
+
+
+                <p class="photo-hint" id="photoHint">
+                    CLICK MY PHOTO TO REVEAL MY NAME ↗
+                </p>
+
+            </div>
+
+
+            <div class="hero-bottom">
+
+                <span>
+                    CREATIVE SPACE · PERSONAL JOURNEY
+                </span>
+
+                <a href="#about">
+                    SCROLL TO EXPLORE ↓
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             DATE AND GREETING
+        ====================================== -->
+
+        <section class="welcome-strip">
+
+            <div>
+
+                <p class="small-label">
+                    A NEW DAY, A NEW STORY
+                </p>
+
+                <h2 id="greeting">
+                    Hello, welcome!
+                </h2>
+
+            </div>
+
+
+            <div class="date-display">
+
+                <span id="currentDate">
+                    Loading date...
+                </span>
+
+                <strong id="digitalClock">
+                    00:00:00
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             FEATURED STORIES
+        ====================================== -->
+
+        <section
+            class="section featured-section"
+            id="featured"
+        >
+
+            <div class="section-heading reveal">
+
+                <div>
+
+                    <p class="small-label">
+                        A GLIMPSE OF MY WORLD
+                    </p>
+
+                    <h2>
+                        Featured <em>Stories.</em>
+                    </h2>
+
+                </div>
+
+                <span class="section-number">
+                    01 / 05
+                </span>
+
+            </div>
+
+
+            <div class="featured-grid">
+
+
+                <!-- CARD 01: MY STORY -->
+
+                <a
+                    href="My Story.html"
+                    class="featured-card reveal"
+                >
+
+                    <div class="card-visual visual-one">
+
+                        <span class="visual-number">
+                            01
+                        </span>
+
+                        <span class="visual-word">
+                            MY<br>STORY
+                        </span>
+
+                        <span class="visual-decoration">
+                            ✳
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <div>
+
+                            <p class="small-label">
+                                PERSONAL
+                            </p>
+
+                            <h3>
+                                Behind The Name
+                            </h3>
+
+                        </div>
+
+                        <span class="card-arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- CARD 02: LITTLE MOMENTS -->
+
+                <article class="featured-card reveal">
+
+                    <div class="card-visual visual-two">
+
+                        <span class="visual-number">
+                            02
+                        </span>
+
+                        <span class="visual-word">
+                            LITTLE<br>MOMENTS
+                        </span>
+
+                        <span class="visual-decoration">
+                            ✿
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <div>
+
+                            <p class="small-label">
+                                MEMORIES
+                            </p>
+
+                            <h3>
+                                Little Moments
+                            </h3>
+
+                        </div>
+
+                        <span class="card-arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 03: THINGS I LOVE -->
+
+                <article class="featured-card reveal">
+
+                    <div class="card-visual visual-three">
+
+                        <span class="visual-number">
+                            03
+                        </span>
+
+                        <span class="visual-word">
+                            MY<br>CREATIVE SIDE
+                        </span>
+
+                        <span class="visual-decoration">
+                            ✧
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-info">
+
+                        <div>
+
+                            <p class="small-label">
+                                CREATIVITY
+                            </p>
+
+                            <h3>
+                                Things I Love
+                            </h3>
+
+                        </div>
+
+                        <span class="card-arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ABOUT SECTION
+        ====================================== -->
+
+        <section
+            class="about-section"
+            id="about"
+        >
+
+            <div class="about-content reveal">
+
+                <p class="small-label">
+                    A LITTLE INTRODUCTION
+                </p>
+
+                <h2>
+                    Get to know<br>
+                    <em>Huda Syuhada.</em>
+                </h2>
+
+                <p class="about-description">
+                    Welcome to my little corner of the internet.
+                    This website is a reflection of who I am,
+                    the things I enjoy, my experiences and
+                    the little moments that make my journey meaningful.
+                </p>
+
+                <a href="#journey" class="text-link">
+                    DISCOVER MY JOURNEY ↗
+                </a>
+
+            </div>
+
+
+            <div class="about-side reveal">
+
+                <div class="about-quote">
+
+                    <span class="quote-mark">
+                        “
+                    </span>
+
+                    <p>
+                        Every little detail has a story,
+                        and every story deserves a space.
+                    </p>
+
+                    <span class="quote-line"></span>
+
+                    <small>
+                        HUDA SYUHADA
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             JOURNEY SECTION
+        ====================================== -->
+
+        <section
+            class="section journey-section"
+            id="journey"
+        >
+
+            <div class="section-heading reveal">
+
+                <div>
+
+                    <p class="small-label">
+                        THE PATH SO FAR
+                    </p>
+
+                    <h2>
+                        My <em>Journey.</em>
+                    </h2>
+
+                </div>
+
+                <span class="section-number">
+                    02 / 05
+                </span>
+
+            </div>
+
+
+            <div class="journey-list">
+
+
+                <!-- JOURNEY 01 -->
+
+                <article class="journey-item reveal">
+
+                    <span class="journey-year">
+                        01
+                    </span>
+
+                    <div>
+
+                        <p class="small-label">
+                            THE BEGINNING
+                        </p>
+
+                        <h3>
+                            Where It All Begins
+                        </h3>
+
+                        <p>
+                            Every journey starts somewhere.
+                            This is where my story begins.
+                        </p>
+
+                    </div>
+
+                    <span class="journey-symbol">
+                        ↗
+                    </span>
+
+                </article>
+
+
+                <!-- JOURNEY 02 -->
+
+                <article class="journey-item reveal">
+
+                    <span class="journey-year">
+                        02
+                    </span>
+
+                    <div>
+
+                        <p class="small-label">
+                            GROWTH & LEARNING
+                        </p>
+
+                        <h3>
+                            Learning New Things
+                        </h3>
+
+                        <p>
+                            Exploring new knowledge, gaining
+                            experiences and discovering new possibilities.
+                        </p>
+
+                    </div>
+
+                    <span class="journey-symbol">
+                        ↗
+                    </span>
+
+                </article>
+
+
+                <!-- JOURNEY 03 -->
+
+                <article class="journey-item reveal">
+
+                    <span class="journey-year">
+                        03
+                    </span>
+
+                    <div>
+
+                        <p class="small-label">
+                            LOOKING FORWARD
+                        </p>
+
+                        <h3>
+                            Becoming Better
+                        </h3>
+
+                        <p>
+                            Taking small steps towards new goals
+                            and creating meaningful memories.
+                        </p>
+
+                    </div>
+
+                    <span class="journey-symbol">
+                        ↗
+                    </span>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             COLLECTIONS SECTION
+        ====================================== -->
+
+        <section
+            class="collections-section"
+            id="collections"
+        >
+
+            <div class="section-heading reveal">
+
+                <div>
+
+                    <p class="small-label">
+                        A COLLECTION OF LITTLE THINGS
+                    </p>
+
+                    <h2>
+                        My <em>Collections.</em>
+                    </h2>
+
+                </div>
+
+                <span class="section-number">
+                    03 / 05
+                </span>
+
+            </div>
+
+
+            <!-- SEARCH BOX -->
+
+            <div class="collection-search reveal">
+
+                <span>
+                    ⌕
+                </span>
+
+                <input
+                    type="text"
+                    id="collectionSearch"
+                    placeholder="Search my collections..."
+                    aria-label="Search collections"
+                >
+
+            </div>
+
+
+            <!-- COLLECTION GRID -->
+
+            <div
+                class="collection-grid"
+                id="collectionGrid"
+            >
+
+
+                <!-- COLLECTION 01 -->
+
+                <article
+                    class="collection-card reveal"
+                    data-search="memories moments photographs"
+                >
+
+                    <div class="collection-art art-memory">
+
+                        <span>01</span>
+                        <strong>MEMORIES</strong>
+                        <i>✿</i>
+
+                    </div>
+
+                    <h3>
+                        Captured Moments
+                    </h3>
+
+                    <p>
+                        Little memories worth keeping.
+                    </p>
+
+                </article>
+
+
+                <!-- COLLECTION 02 -->
+
+                <article
+                    class="collection-card reveal"
+                    data-search="interests hobbies favourite"
+                >
+
+                    <div class="collection-art art-interest">
+
+                        <span>02</span>
+                        <strong>INTERESTS</strong>
+                        <i>✧</i>
+
+                    </div>
+
+                    <h3>
+                        Things I Enjoy
+                    </h3>
+
+                    <p>
+                        A collection of things I love.
+                    </p>
+
+                </article>
+
+
+                <!-- COLLECTION 03 -->
+
+                <article
+                    class="collection-card reveal"
+                    data-search="creativity design inspiration"
+                >
+
+                    <div class="collection-art art-creative">
+
+                        <span>03</span>
+                        <strong>CREATIVITY</strong>
+                        <i>✳</i>
+
+                    </div>
+
+                    <h3>
+                        Creative Corner
+                    </h3>
+
+                    <p>
+                        Ideas, inspiration and creativity.
+                    </p>
+
+                </article>
+
+
+                <!-- COLLECTION 04 -->
+
+                <article
+                    class="collection-card reveal"
+                    data-search="experiences life journey"
+                >
+
+                    <div class="collection-art art-experience">
+
+                        <span>04</span>
+                        <strong>EXPERIENCES</strong>
+                        <i>♡</i>
+
+                    </div>
+
+                    <h3>
+                        Life Experiences
+                    </h3>
+
+                    <p>
+                        Lessons from different chapters.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- NO SEARCH RESULTS -->
+
+            <p class="no-results" id="noResults">
+                No collections found. Try another keyword.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             CONTACT SECTION
+        ====================================== -->
+
+        <section
+            class="contact-section"
+            id="contact"
+        >
+
+            <div class="contact-content reveal">
+
+                <p class="small-label">
+                    UNTIL NEXT TIME
+                </p>
+
+                <h2>
+                    Thanks for<br>
+                    stopping <em>by.</em>
+                </h2>
+
+                <p>
+                    Thank you for visiting my personal space.
+                    Hope you enjoyed exploring a little part of my story.
+                </p>
+
+                <a href="#home" class="contact-button">
+                    BACK TO TOP ↑
+                </a>
+
+            </div>
+
+
+            <div class="contact-decoration">
+                HS.
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="site-footer">
+
+        <a href="#home" class="footer-logo">
+            HUDA SYUHADA<span>.</span>
+        </a>
+
+        <p>
+            MADE WITH CREATIVITY & A LITTLE BIT OF COFFEE.
+        </p>
+
+        <span>
+            © 2026 HUDA SYUHADA. ALL RIGHTS RESERVED.
+        </span>
+
+    </footer>
+
+
+    <!-- =====================================
+         BACKGROUND MUSIC
+    ====================================== -->
+
+    <audio id="backgroundMusic" loop>
+        <source src="audio/background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button
+        id="musicButton"
+        class="music-button"
+        type="button"
+        aria-label="Play background music"
+    >
+        ♫ Play Music
+    </button>
+
+
+</body>
+
+</html>

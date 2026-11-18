@@ -1,0 +1,903 @@
+
+/* =========================================
+   HUDA SYUHADA - MY STORY
+   EDITORIAL PERSONAL WEBSITE
+========================================= */
+
+
+/* =========================================
+   1. GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f5ef;
+    color: #4c392e;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+:root {
+    --cream: #f8f5ef;
+    --brown: #4c392e;
+    --dark-brown: #38271f;
+    --pink: #d9aaa8;
+    --light-pink: #ead2cc;
+    --muted: #8d7a6d;
+}
+
+
+/* =========================================
+   2. NAVIGATION
+========================================= */
+
+.story-header {
+    width: 100%;
+    padding: 22px 8%;
+    background: rgba(248, 245, 239, 0.97);
+    position: relative;
+    z-index: 10;
+}
+
+.story-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--brown);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 12px;
+    color: var(--muted);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+.nav-button {
+    border: 1px solid var(--brown);
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 11px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: var(--brown);
+    color: white;
+}
+
+
+/* =========================================
+   3. COMMON ELEMENTS
+========================================= */
+
+.story-section {
+    padding: 110px 12%;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #b1847c;
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 55px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.section-heading h2 i {
+    color: #b1847c;
+    font-weight: 400;
+}
+
+.heading-description {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.9;
+    margin-top: 16px;
+}
+
+.centered {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+/* =========================================
+   4. HERO SECTION
+   BACKGROUND IMAGE ADDED
+========================================= */
+
+.story-hero {
+    min-height: 700px;
+    padding: 80px 12%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+
+    /* BACKGROUND IMAGE */
+    background:
+        linear-gradient(
+            rgba(248, 245, 239, 0.78),
+            rgba(248, 245, 239, 0.78)
+        ),
+        url("images/story-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 560px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(65px, 9vw, 120px);
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 28px;
+}
+
+.hero-content h1 span,
+.story-closing h2 span {
+    color: #bd8d86;
+}
+
+.hero-subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 15px 25px;
+    border: 1px solid var(--brown);
+    border-radius: 30px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.explore-button:hover {
+    background: var(--brown);
+    color: white;
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+    width: 350px;
+    height: 450px;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.hero-image img {
+    border-radius: 180px 180px 5px 5px;
+    object-position: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 12px 12px 0 #dfc5bc;
+    transition: transform 0.7s ease;
+}
+
+.hero-image:hover img {
+    transform: translateY(-8px);
+}
+
+.image-caption {
+    position: absolute;
+    bottom: -32px;
+    right: 0;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+.hero-decoration {
+    position: absolute;
+    bottom: 65px;
+    left: 48%;
+    color: #b1847c;
+    font-size: 48px;
+    animation: heartbeat 2s infinite;
+}
+
+.hero-side-text {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    writing-mode: vertical-rl;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #b1847c;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
+/* =========================================
+   5. INTRODUCTION
+========================================= */
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 85px;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.intro-image {
+    height: 490px;
+    position: relative;
+}
+
+.intro-image img {
+    border-radius: 5px 150px 5px 5px;
+    object-position: center;
+    transition: transform 0.7s ease;
+}
+
+.intro-image:hover img {
+    transform: scale(1.025);
+}
+
+.photo-number {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+.intro-text {
+    padding: 15px 0;
+}
+
+.small-heading {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #b1847c;
+    margin-bottom: 15px;
+}
+
+.intro-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 43px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.intro-text p:not(.small-heading) {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+.intro-signature {
+    margin-top: 30px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #b1847c;
+}
+
+
+/* =========================================
+   6. EDUCATION
+   WITH SCHOOL & UNIVERSITY PHOTOS
+========================================= */
+
+.education {
+    background: #efe5dc;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* EDUCATION CARD */
+
+.education-card {
+    padding: 0;
+    background: #faf7f2;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+}
+
+.featured-education {
+    background: #dfc5bc;
+}
+
+/* EDUCATION IMAGE */
+
+.education-photo {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.education-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.7s ease;
+}
+
+.education-card:hover .education-photo img {
+    transform: scale(1.05);
+}
+
+/* EDUCATION TEXT */
+
+.education-card-content {
+    padding: 35px 45px 45px;
+}
+
+.card-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: #bd8d86;
+}
+
+.card-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin: 20px 0 12px;
+    color: var(--muted);
+}
+
+.education-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.education-card-content > p:nth-of-type(2) {
+    font-size: 11px;
+    color: #a77c75;
+    margin-bottom: 15px;
+}
+
+.education-card-content > p:nth-of-type(3) {
+    font-size: 12px;
+    line-height: 1.9;
+    color: var(--muted);
+}
+
+
+/* =========================================
+   7. PERSONALITY
+========================================= */
+
+.personality-content {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.personality-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.personality-text h2 i {
+    color: #b1847c;
+}
+
+.personality-text p:not(.eyebrow) {
+    font-size: 13px;
+    line-height: 2;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.personality-note {
+    margin-top: 25px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #b1847c;
+    font-size: 17px;
+}
+
+.personality-image {
+    height: 440px;
+    position: relative;
+}
+
+.personality-image img {
+    border-radius: 5px 150px 5px 5px;
+    transition: transform 0.7s ease;
+}
+
+.personality-image:hover img {
+    transform: scale(1.025);
+}
+
+.photo-caption {
+    display: block;
+    margin-top: 13px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+.personality-quote {
+    max-width: 700px;
+    margin: 90px auto 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 27px;
+    color: #a77c75;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   8. INTERESTS
+========================================= */
+
+.interests {
+    background: #efe5dc;
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 50px;
+}
+
+.interest-card {
+    padding: 30px 23px;
+    background: #faf7f2;
+    min-height: 220px;
+    border-top: 3px solid #d9aaa8;
+    transition: transform 0.4s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-8px);
+}
+
+.interest-number {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #bd8d86;
+    margin-bottom: 25px;
+}
+
+.interest-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.interest-card p {
+    font-size: 11px;
+    line-height: 1.9;
+    color: var(--muted);
+}
+
+
+/* =========================================
+   9. TRAVEL
+========================================= */
+
+.travel {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    gap: 85px;
+    align-items: center;
+}
+
+.travel-image {
+    height: 480px;
+    position: relative;
+}
+
+.travel-image img {
+    border-radius: 150px 150px 5px 5px;
+    transition: transform 0.7s ease;
+}
+
+.travel-image:hover img {
+    transform: scale(1.025);
+}
+
+.travel-image .photo-caption {
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+}
+
+.travel-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.travel-content h2 i {
+    color: #b1847c;
+}
+
+.travel-content p:not(.eyebrow) {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+.travel-note {
+    display: inline-block;
+    margin-top: 20px;
+    color: #b1847c;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 17px;
+}
+
+
+/* =========================================
+   10. DREAMS
+========================================= */
+
+.dreams {
+    background: #efe5dc;
+}
+
+.dreams-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.dream-item {
+    display: flex;
+    gap: 35px;
+    padding: 30px 0;
+    border-bottom: 1px solid #d9c9bd;
+}
+
+.dream-item > span {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #b1847c;
+}
+
+.dream-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.dream-item p {
+    font-size: 12px;
+    line-height: 1.9;
+    color: var(--muted);
+}
+
+
+/* DREAM IMAGE */
+
+.dream-image {
+    max-width: 850px;
+    height: 390px;
+    margin: 75px auto 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.dream-image img {
+    transition: transform 0.7s ease;
+}
+
+.dream-image:hover img {
+    transform: scale(1.04);
+}
+
+.dream-image span {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+
+/* =========================================
+   11. CLOSING
+========================================= */
+
+.story-closing {
+    padding: 120px 20px;
+    text-align: center;
+    background: #dfc5bc;
+}
+
+.story-closing h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 7vw, 75px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.story-closing > p:not(.eyebrow) {
+    max-width: 480px;
+    margin: 0 auto 35px;
+    font-size: 13px;
+    line-height: 2;
+    color: #776156;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 14px 24px;
+    border: 1px solid var(--brown);
+    border-radius: 30px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: var(--brown);
+    color: white;
+}
+
+
+/* =========================================
+   12. FOOTER
+========================================= */
+
+.story-footer {
+    padding: 25px;
+    text-align: center;
+    background: var(--dark-brown);
+    color: #e9dcd2;
+}
+
+.story-footer p {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   13. RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .story-section {
+        padding: 90px 8%;
+    }
+
+    .story-hero {
+        padding: 70px 8%;
+    }
+
+    .hero-image {
+        width: 290px;
+        height: 400px;
+        margin-right: 10px;
+    }
+
+    .intro-content,
+    .personality-content,
+    .travel {
+        gap: 45px;
+    }
+
+    .interest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   14. RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .story-header {
+        padding: 18px 6%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-button {
+        padding: 10px 14px;
+        font-size: 10px;
+    }
+
+    .story-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+        padding: 80px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 68px;
+    }
+
+    .hero-image {
+        width: min(280px, 85%);
+        height: 360px;
+        margin: 0 auto;
+    }
+
+    .hero-side-text,
+    .hero-decoration {
+        display: none;
+    }
+
+    .story-section {
+        padding: 75px 7%;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .intro-content,
+    .personality-content,
+    .travel,
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .intro-image {
+        height: 390px;
+    }
+
+    .intro-text h3 {
+        font-size: 35px;
+    }
+
+    /* EDUCATION IMAGE - MOBILE */
+
+    .education-photo {
+        height: 230px;
+    }
+
+    .education-card-content {
+        padding: 30px 25px 35px;
+    }
+
+    .education-card h3 {
+        font-size: 27px;
+    }
+
+    .personality-text h2,
+    .travel-content h2 {
+        font-size: 36px;
+    }
+
+    .personality-image,
+    .travel-image {
+        height: 370px;
+    }
+
+    .personality-quote {
+        font-size: 22px;
+        margin-top: 65px;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .interest-card {
+        padding: 22px 16px;
+        min-height: 210px;
+    }
+
+    .interest-card h3 {
+        font-size: 18px;
+    }
+
+    .dream-item {
+        gap: 20px;
+    }
+
+    .dream-image {
+        height: 250px;
+        margin-top: 50px;
+    }
+
+    .story-closing {
+        padding: 90px 20px;
+    }
+
+}
